@@ -4,7 +4,7 @@ import { generatePackingList } from "@/services/groq";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { PackingListItem } from "@/types/database";
+import type { PackingListItem } from "@/types/models";
 import { Plus, Trash2, Sparkles } from "lucide-react";
 
 export function PackingListSection({

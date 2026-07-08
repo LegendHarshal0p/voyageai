@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
-import type { Notification } from "@/types/database";
+import type { Notification } from "@/types/models";
 import { Bell } from "lucide-react";
 import { cn } from "@/lib/utils";
 

@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { Destination, DestinationPriority } from "@/types/database";
+import type { Destination, DestinationPriority } from "@/types/models";
 import { Plus, Trash2, Pencil, X, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 

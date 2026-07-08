@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import type { Trip } from "@/types/database";
+import type { Trip } from "@/types/models";
 import { FavoriteButton } from "@/components/favorites/FavoriteButton";
 import { Plus, Copy } from "lucide-react";
 

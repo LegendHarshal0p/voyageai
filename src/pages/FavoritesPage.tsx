@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { Favorite, FavoriteType } from "@/types/database";
+import type { Favorite, FavoriteType } from "@/types/models";
 import { Trash2, Heart } from "lucide-react";
 
 const TYPE_LABELS: Record<FavoriteType, string> = {

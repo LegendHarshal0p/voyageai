@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { Trip, Expense } from "@/types/database";
+import type { Trip, Expense } from "@/types/models";
 import {
   BarChart,
   Bar,

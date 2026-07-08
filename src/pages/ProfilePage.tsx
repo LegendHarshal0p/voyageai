@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { Profile } from "@/types/database";
+import type { Profile } from "@/types/models";
 import { Upload, User } from "lucide-react";
 
 const BUCKET = "profile-images";

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
-import type { FavoriteType } from "@/types/database";
+import type { FavoriteType } from "@/types/models";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { Json } from "@/types/database";
 
 export function FavoriteButton({
   type,
@@ -14,7 +15,7 @@ export function FavoriteButton({
   type: FavoriteType;
   label: string;
   referenceId?: string;
-  metadata?: Record<string, unknown>;
+  metadata?: Json;
 }) {
   const { user } = useAuth();
   const [favoriteId, setFavoriteId] = useState<string | null>(null);

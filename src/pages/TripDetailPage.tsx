@@ -9,7 +9,7 @@ import { PackingListSection } from "@/components/trips/PackingListSection";
 import { DocumentsSection } from "@/components/trips/DocumentsSection";
 import { TripMap } from "@/components/trips/TripMap";
 import { ChatPanel } from "@/components/chat/ChatPanel";
-import type { Trip, TripDay, Activity } from "@/types/database";
+import type { Trip, TripDay, Activity } from "@/types/models";
 import { cn } from "@/lib/utils";
 
 const TABS = ["Itinerary", "Hotels", "Restaurants", "Packing", "Documents", "Map", "Assistant", "Expenses"] as const;
@@ -26,13 +26,13 @@ export default function TripDetailPage() {
     if (!tripId) return;
 
     async function load() {
-      const { data: tripData } = await supabase.from("trips").select("*").eq("id", tripId).single();
+      const { data: tripData } = await supabase.from("trips").select("*").eq("id", tripId!).single();
       setTrip(tripData as Trip);
 
       const { data: dayData } = await supabase
         .from("trip_days")
         .select("*")
-        .eq("trip_id", tripId)
+        .eq("trip_id", tripId!)
         .order("day_number", { ascending: true });
 
       const daysWithActivities = await Promise.all(

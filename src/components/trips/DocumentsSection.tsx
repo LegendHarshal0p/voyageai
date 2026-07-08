@@ -3,7 +3,7 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { analyzeDocumentImage } from "@/services/groq";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { TravelDocument, DocumentCategory } from "@/types/database";
+import type { TravelDocument, DocumentCategory } from "@/types/models";
 import { Upload, Trash2, FileText } from "lucide-react";
 
 const BUCKET = "documents";
